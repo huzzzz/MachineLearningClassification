@@ -1,0 +1,32 @@
+Assignment 1: Simple Classification
+Objective: In this assignment, you have to perform three class classification. Based on the given attributes about houses in a particular county, you have to predict the class in the last column, which is "SaleStatus". For this purpose, you are given training data in the file trainSold.csv, and testing data in the file testSold.csv. The latter has the last column missing, for which you have to generate labels.
+
+Note: Please read the instructions very carefully. If you do not follow them exactly, then your submission will be penalized. Re-evaluation requests because of unmindful deviation from the instructions cannot be entertained due to the large class size.
+
+Learning objectives:
+1. Learn to pre-process data. For example, nominal variables need to be converted into groups of Bernoulli, or data range should be normalized.
+2. Try different multi-class classification techniques. At least three different ones should be tried.
+3. Learn good practices for validation and hyper-parameter tuning, including visualizing the impact of hyper-parameters.
+4. Learn about cross-validation.
+5. Learn about feature importance.
+6. Learn about visualizing the decision boundaries for at least the top two most important features.
+
+Programming language: Python only. R, C, C++, Java, and Matlab not supported due to class size.
+
+Submission details:
+0. A single zipped folder named <roll no.>.zip or <roll no.>.rar should be uploaded. Inside the folder, there should be the following files (in addition to any other files needed).
+1. train.csv (copied as given)
+2. test.csv (copied as given)
+3. train.py will be the training program to be run. This program should take train.csv as input output the trained models as separate files, e.g. model1.csv, model2.pkl etc. There is no restriction on the format in which the trained classification models are output. In addition to giving the models, this file should also plot graphs of validation or cross-validation accuracy for different hyper-parameter settings for the different classifiers tried. The output should be self-explanatory such that it is obvious to us which model and hyper-parameter was finally selected and why.
+4. out.csv will be the output of classification of test data in test.csv. out.csv should have only two columns: Id, SaleStatus. The format of these two columns should match that of train.csv
+5. gt.csv will be a dummy file with the exact same format (column headers, number of rows) as out.csv. The only difference is that this should contain ground truth labels in the column SaleStatus. You don't know the ground truth. So, just put some random labels there. When we test your code, we will replace this with the actual gt.csv and run your test.py.
+6. test.py will be the testing program to be run. This program should take test.csv, gt.csv, and the best one or two saved models as inputs, and output out.csv and display the accuracy (No. of correctly classified samples / total no. of samples in test.csv). Do not display error rate. We will pick the best of the two, if you test on two models. When you actually run it on your computer with your dummy gt.csv, you will get high error rate. Don't be fazed by this because hopefully the error will be low when we replace it with the actual gt.csv.
+7. <roll no.>.pdf will be a report file with details as given under.
+8. Declaration_<roll no.>.pdf will be a scanned copy of a signed declaration with the following wording. "In the <code_file> for assignment 1 submitted on <date>, the following lines were written by me: <line numbers>, and in the report was completely written by me. I understand that cases of copying lines that deviate from this signed declaration as liable to be awarded F grade." Submissions without the declaration will not be evaluated.
+9. Pre-trained models should also be stored as finalModel1.csv or finalModel2.pkl etc. We may choose to stop running your train.py if it takes a long time, and only run test.py. Make sure that test.py actually reads finalModel1.csv instead of model1.csv etc.
+
+Report details:
+The pdf report file should answer the following questions:
+   1) What strategy worked best for data pre-processing and why? Mention any strategies tried that didn't work.
+   2) Which classifier worked the best? Why do you think those were appropriate for this data? What else was tried that didn't work?
+   3) Which hyper-parameters were tuned and how? You may include hyper-parameter tuning graphs here.
